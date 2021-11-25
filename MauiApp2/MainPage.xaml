@@ -1,0 +1,129 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             BackgroundColor="{DynamicResource PrimaryColor}">
+
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+            <Label 
+                Text="Happy, Learning!"
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Hi Smart,welcome to .NET Multi-platform App UI"
+                Grid.Row="1"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <ImageButton 
+               x:Name="PlayButton"
+                WidthRequest="50"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                GridLayout.Column="4"
+                BackgroundColor="GreenYellow"
+                Aspect="Center"
+                >
+            </ImageButton>
+            <Label 
+                Text="Current count: 0"
+                Grid.Row="2"
+                TextColor="Grey"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                x:Name="CounterLabel"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Button 
+                Text="Increase"
+                TextColor="Blue"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+            <Image Grid.Row="4"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                WidthRequest="259"
+                HeightRequest="350"
+                HorizontalOptions="Center" >
+                <Image.Shadow>
+                    <Shadow
+                    Brush="#000000"
+                    Opacity="0.8"
+                    Radius="40"
+                    Offset="20,20"/>
+
+                </Image.Shadow>
+            </Image>
+
+            <Label
+                Text="Learn It Now"
+                TextColor="Black"
+                FontSize="Medium"
+                HorizontalOptions="CenterAndExpand"
+                Grid.Row="6"
+                FontAttributes="Bold" />
+
+            <Button
+                Grid.Column="1" 
+                Text="Reduce"
+                Clicked="OnCounterDecreaseClicked"
+                FontAttributes="Bold"
+                TextColor="Red"
+                VerticalOptions="Start"
+                LineBreakMode="MiddleTruncation" />
+            
+        </Grid>
+    </ScrollView>
+    <!--<CollectionView ItemsSource="{Binding Monkeys}"
+                ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" RowDefinitions="60" ColumnDefinitions="70,*">
+                            <Image Grid.RowSpan="2" 
+                        Source="{Binding ImageUrl}" 
+                        Aspect="AspectFill"
+                        HeightRequest="60" 
+                        WidthRequest="60">
+                                <Image.Clip>
+                                    <RectangleGeometry Rect="0,0,160,160"/>
+                                </Image.Clip>
+                            </Image>
+                            <Label Grid.Column="1" 
+                        Text="{Binding Name}" 
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        VerticalOptions="Start"
+                        LineBreakMode="TailTruncation" />
+                            <Label Grid.Column="1" 
+                        Text="{Binding Location}"
+                        LineBreakMode="TailTruncation"
+                        FontAttributes="Italic" 
+                        TextColor="White"
+                        VerticalOptions="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+            <!--       <Label Grid.Column="1" 
+                Text="Learning"
+                LineBreakMode="TailTruncation"
+                FontAttributes="Italic" 
+                TextColor="BlueViolet"
+                VerticalOptions="End" />-->
+
+
+
+
+</ContentPage>
