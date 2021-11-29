@@ -52,6 +52,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\Smart.jpeg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Properties\Resources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -67,6 +71,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Pages\" />
 	  <Folder Include="Views\" />
 	</ItemGroup>
 

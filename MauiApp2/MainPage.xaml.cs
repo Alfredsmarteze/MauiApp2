@@ -1,4 +1,5 @@
 ﻿using System;
+using MauiApp2.ViewModel;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Essentials;
 
@@ -13,18 +14,23 @@ namespace MauiApp2
 			InitializeComponent();
 		}
 
+		public void ShowData()
+		{ 
+			
+
+        }
 		private async void OnCounterClicked(object sender, EventArgs e)
 		{
 			count++;
 			CounterLabel.Text = $"Count increase: {count}";
 			SemanticScreenReader.Announce(CounterLabel.Text);
-			await DisplayAlert($"Counter, today's date is {DateTime.Now.ToString("M") +" "+ DateTime.Now.Year} ", $"Count increase by {count}","Ok", "Cancel", Microsoft.Maui.FlowDirection.MatchParent);
-			var dc= await DisplayPromptAsync("OK","Cancel");
-			if(dc=="Ok")
-			await	DisplayAlert("Info", "Copied", "Cancel");
-            
-			
-			
+			await DisplayAlert($"Counter, today's date is  {DateTime.Now.ToString("M") +" "+ DateTime.Now.Year} ", $"Count increase by {count}","Ok", "Cancel", Microsoft.Maui.FlowDirection.MatchParent);
+			DisplayAlert("Info", "Copied", "Cancel");
+			PersonDetailViewModel personDetailViewModel = new PersonDetailViewModel();
+			personDetailViewModel.setData.ForEach(s => s.Surname.ToLower());
+
+
+
 		}
 		private async void OnCounterDecreaseClicked(object sender, EventArgs e)
 		{

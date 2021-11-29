@@ -12,6 +12,7 @@ namespace MauiApp2
 			InitializeComponent();
 
 			MainPage = new MainPage();
+
 		}
 	}
 }

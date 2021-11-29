@@ -22,7 +22,9 @@
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="Padding" Value="14,10" />
             </Style>
-
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="3"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
